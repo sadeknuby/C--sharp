@@ -6,22 +6,24 @@ namespace app
         static void Main(string[] args)
         {
             int c = 1;
-            float avg=0;
+            float avg = 0;
             Console.WriteLine("Enter the student's 3 grades:");
             string decision = "o";
             while (decision != "n")
             {
                 int i = 0;
                 while (i<3)
-                {                  
-                    Console.Write($"Grade {c}:");
+                {
+                   
+                   Console.Write($"Grade {c}:");
                    float g = float.Parse(Console.ReadLine());
 
                     if (g >= 0 && g <= 100)
                     {
+                        
                         i++;
                         c++;
-                        avg = (avg + g) / 3;
+                        avg = (avg + g);
                     }
                     else
                     {
@@ -30,7 +32,7 @@ namespace app
                     
                 }
                 c = 1;
-
+                avg = avg / 3;
 
                 Console.WriteLine("\n\nAverage = {0:0.00}",avg);
                 string message = avg >= 50 ? "Passed" : "Failed";
@@ -70,7 +72,7 @@ namespace app
                     v =z||y;
 
                 }
-
+                avg = 0;
             }
             Console.WriteLine("Program Ended");
 
